@@ -4,7 +4,7 @@ import os
 
 # ------------------ PAGE CONFIG ------------------
 st.set_page_config(
-    page_title="DAIT College Assistant",
+    page_title="College Assistant",
     page_icon="🎓",
     layout="centered"
 )
@@ -40,7 +40,7 @@ set_background("background.jpg")
 # ------------------ COLLEGE DATA ------------------
 college_info = {
     "aboutcollege": (
-    "Dhaanish Ahmed Institute of Technology (DAIT), Coimbatore, is a private engineering "
+    "Demo College, Coimbatore, is a private engineering "
     "college approved by AICTE and affiliated to Anna University. The institution offers "
     "industry-oriented undergraduate and postgraduate programs with a strong focus on "
     "academic excellence, innovation, discipline, and holistic student development. "
@@ -48,10 +48,10 @@ college_info = {
     "and industry collaborations to prepare students for successful careers."
 ),
 
-    "college_name": "Dhaanish Ahmed Institute of Technology (DAIT)",
-    "assistant": "I am your DAIT College Assistant. I support English, Tamil, and Malayalam. How can I help you?",
+    "college_name": "Demo College",
+    "assistant": "I am your Demo College Assistant. I support English, Tamil, and Malayalam. How can I help you?",
 
-    "location": "Dhaanish Avenue, Veerappanur, K.G. Chavadi, Coimbatore – 641105, Tamil Nadu",
+    "location": " Demo, Demo college, Ukkadam, Coimbatore – 641105, Tamil Nadu",
     "type": "Private Engineering College affiliated to Anna University and approved by AICTE",
 
     "courses": "B.E / B.Tech – CSE, AI & DS, AI & ML, ECE, IT, Biomedical Engineering, Robotics & Automation, Food Technology",
@@ -91,7 +91,7 @@ college_info = {
     "bonafide": "Bonafide and Transfer Certificates can be applied through the College Office (Information Center – IC).",
 
     "grievance": (
-        "DAIT has a Student Grievance Redressal Committee (SGRC). "
+        "Our College has a Student Grievance Redressal Committee (SGRC). "
         "Complaints can be submitted via the college website portal, "
         "email: antiraggingcell@dhaanishcollege.in, "
         "or helpline numbers: 83449 16000 / 86000 58000."
@@ -102,9 +102,9 @@ college_info = {
     "discipline": "Strict discipline is maintained to ensure a safe and professional environment.",
     "ragging": "Zero-tolerance anti-ragging policy is strictly followed.",
 
-    "reach": "From Gandhipuram or Ukkadam Bus Stand, take Bus No. 96 or 48 towards K.G. Chavadi.",
+    "reach": "From Gandhipuram there are more busses available to Ukkadam Bus Stand.",
 
-    "contact": "Website: https://dhaanish.com | Phone & email details are available on the official website."
+    "contact": "Website: https://demo college.com | Phone & email details are available on the official website."
 }
 
 # ------------------ CHATBOT LOGIC ------------------
@@ -117,7 +117,7 @@ def chatbot_reply(user_input):
         return f"ℹ️ {college_info['aboutcollege']}"
 
     if text in ["hi", "hello", "hey", "hai"]:
-        return "😊 Hello! Welcome to **DAIT College Assistant**."
+        return "😊 Hello! Welcome to **Demo College Assistant**."
 
     if "who are you" in text or "assistant" in text:
         return college_info["assistant"]
@@ -216,7 +216,7 @@ def chatbot_reply(user_input):
 
 # ------------------ UI ------------------
 st.markdown("<div class='chat-box'>", unsafe_allow_html=True)
-st.title("🎓 DAIT College Assistant")
+st.title("🎓 Demo College Assistant")
 st.caption("Official College Website Chatbot")
 
 if "messages" not in st.session_state:
